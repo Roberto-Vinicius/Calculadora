@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, black, darkblue);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#container {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#result {
+    background-color: white;
+    color: black;
+    text-align: right;
+    font-size: 30px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.dado {
+    padding: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(110deg, #4fcf70, #fad648, #a74fcf, #12bcf0, #44ce7b);
+    background-size: 50% 100%;
+    border-radius: inherit
+}
+
+.dado:hover::before {
+    animation: borderAnimate 0.85s linear infinite;
+}
+
+@keyframes borderAnimate {
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+.dado button {
+    display: block;
+    background-color: black;
+    padding: 3px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    font-size: 23px;
+    color: white;
+}
+
+
